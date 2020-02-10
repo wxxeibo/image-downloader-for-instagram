@@ -1,0 +1,36 @@
+{
+   "background": {
+      "page": "lib/chrome/background.html"
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "data/icons/16.png",
+         "32": "data/icons/32.png",
+         "48": "data/icons/48.png",
+         "64": "data/icons/64.png"
+      },
+      "default_title": "Image Downloader for Instagram™"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "data/content_script/inject.css" ],
+      "js": [ "data/content_script/inject.js" ],
+      "matches": [ "*://*.instagram.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Easily download and save desired images for instagram with just one click.",
+   "homepage_url": "https://github.com/wxxeibo/image-downloader-for-instagram",
+   "icons": {
+      "128": "data/icons/128.png",
+      "16": "data/icons/16.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
+   },
+   "manifest_version": 2,
+   "name": "Image Downloader for Instagram™",
+   "permissions": [ "storage", "downloads", "*://*.instagram.com/*" ],
+   "short_name": "image-downloader-for-instagram",
+   "version": "0.1.0",
+   "web_accessible_resources": [ "data/content_script/icons/download.png" ]
+}
